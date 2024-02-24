@@ -1,6 +1,7 @@
 <script setup>
 import axios from 'axios';
 import { onMounted, ref } from 'vue';
+import CreateCategory from './CreateCategory.vue';
 
 const categories = ref({})
 const products = ref({})
@@ -31,7 +32,7 @@ onMounted(async () => {
 <template>
     <h1>Testing API</h1>
 
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-4 gap-4" style="display: flex">
         <div class="space-y-2" v-for="product in products" :key="product.id">
             <a href="#">
                 <img src="http://placehold.it/300x400" :alt="product.name" />
@@ -43,4 +44,9 @@ onMounted(async () => {
             <p class="prose-slate">{{ product.description }}</p>
         </div>
     </div>
+    <div>
+        <h2>Create a category from Vue</h2>
+        <create-category />
+    </div>
+
 </template>
