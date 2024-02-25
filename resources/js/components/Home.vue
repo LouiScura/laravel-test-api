@@ -32,11 +32,11 @@ onMounted(async () => {
 <template>
     <h1>Testing API</h1>
 
-    <div class="grid grid-cols-4 gap-4" style="display: flex">
+    <div class="grid grid-cols-4 gap-4">
         <div class="space-y-2" v-for="product in products" :key="product.id">
-            <a href="#">
-                <img src="http://placehold.it/300x400" :alt="product.name" />
-            </a>
+<!--            <a href="#">-->
+<!--                <img src="http://placehold.it/300x400" :alt="product.name" />-->
+<!--            </a>-->
             <a class="text-slate-500 text-xl font-semibold hover:underline">
                 {{ product.name }}
             </a>

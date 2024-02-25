@@ -20,14 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Categories apiResource
+Route::apiResource('/categories', CategoryController::class);
 
-// Categories
-Route::get('/categories', [CategoryController::class, 'index']);
-Route::get('/categories/{category}', [CategoryController::class, 'show']);
+// Category List
 Route::get('/lists/categories', [CategoryController::class, 'list']);
-Route::post('/categories', [CategoryController::class, 'store']);
-
-
 
 // Products
 Route::get('/products', [ProductController::class, 'index']);

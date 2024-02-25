@@ -20,7 +20,8 @@ class CategoryResource extends JsonResource
             'description' => $this->when($request->is('api/categories*'), function () {
                 return $this->description;
             }),
-            'testing_here' => 'returning new category resource json here!!'
+            'testing_here' => 'returning new category resource json here!!',
+            'photo' => $this->photo,
         ];
     }
 }
